@@ -1,0 +1,56 @@
+body{
+    background: #333;
+    color: white;
+    font-family:Arial Bold;
+}
+.main_div{
+    width: 100%;
+    max-width: 1200px;
+    margin: 25px auto;
+}
+.main_div h1{
+    text-align: center;
+    font-weight: 400;
+}
+.main_div .panels{
+    list-style-type: none;
+    margin-top: 20px;
+}
+.main_div .panels li{
+    position: relative;
+    width: 23%;
+    height:220px;
+    float: left;
+    display: block;
+    box-sizing: border-box;
+    font-size: 25px;
+    cursor: pointer;
+}
+.main_div .panels li div{
+    width: 100%;
+    text-align: center;
+    padding: 48% 0; 
+    text-transform: uppercase;
+}
+
+/* Animation part */
+.main_div .panels li div.back{
+    transform: rotateY(90deg);
+}
+.main_div .panels li div.front{
+    position: absolute;
+}
+.main_div .panels li:hover div.front{
+    animation: twi 0.4s linear forwards;
+}
+.main_div .panels li:hover div.back{
+    animation: twi 0.4s 0.3s linear reverse forwards;
+}
+@keyframes twi {
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(90deg);
+    }
+}
